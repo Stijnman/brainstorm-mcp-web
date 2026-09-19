@@ -1,5 +1,5 @@
 import ReactMarkdown from "react-markdown";
-import { DebateResult } from "../../types/types";
+import { DebateResult } from "../../../shared/types";
 
 interface DebateResultsProps {
   result: DebateResult;
