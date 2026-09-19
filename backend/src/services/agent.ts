@@ -1,6 +1,6 @@
-import { AgentSpec, ResolvedAgent } from "../../types/types.js";
-import { resolveModel, ResolvedModel } from "./models.js";
-import { getPersona, PersonaDefinition } from "./personas.js";
+import { AgentSpec, ResolvedAgent } from "../../../shared/types.js";
+import { resolveModel } from "./models.js";
+import { getPersona } from "./personas.js";
 
 export async function resolveAgent(agent: AgentSpec): Promise<ResolvedAgent> {
   const resolvedModel = await resolveModel(agent.model);
