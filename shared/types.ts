@@ -17,7 +17,7 @@ export interface AgentSpec {
   history?: Array<{ role: "user" | "assistant"; content: string }>;
 }
 
-export interface ResolvedAgent extends AgentSpec {
+export interface ResolvedAgent extends Omit<AgentSpec, "model"> {
   model: ResolvedModel;
   systemPrompt: string;
   temperature: number;
