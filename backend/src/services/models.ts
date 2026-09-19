@@ -1,4 +1,4 @@
-import { ResolvedModel } from "../../types/types.js";
+import { ResolvedModel } from "../../../shared/types.js";
 
 export async function resolveModel(modelIdentifier: string): Promise<ResolvedModel> {
   // Mock implementation: replace with actual model resolution logic
