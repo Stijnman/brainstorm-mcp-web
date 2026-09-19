@@ -10,7 +10,10 @@ const debateHistory: DebateHistory[] = [];
 const app = fastify({ logger: true });
 
 app.register(fastifyCors, { origin: true });
-app.register(fastifyMetrics, { endpoint: "/metrics" });
+// fastify-metrics v11 ships CommonJS-style typings that TypeScript/NodeNext
+// exposes as a module namespace even though the runtime default is the plugin.
+const metricsPlugin = (fastifyMetrics as unknown as { default?: typeof fastifyMetrics }).default ?? fastifyMetrics;
+app.register(metricsPlugin as any, { endpoint: "/metrics" });
 app.register(fastifyWebsocket);
 
 app.post("/api/debate", async (req, reply) => {
