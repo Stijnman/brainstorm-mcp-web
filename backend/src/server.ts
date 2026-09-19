@@ -3,7 +3,7 @@ import fastifyCors from "@fastify/cors";
 import fastifyMetrics from "fastify-metrics";
 import fastifyWebsocket from "@fastify/websocket";
 import { runDebateWithAgents, explainAgentRoster } from "./services/debate.js";
-import { DebateOptions, AgentSpec, DebateHistory } from "../../types/types.js";
+import { DebateOptions, AgentSpec, DebateHistory } from "../../shared/types.js";
 import { randomUUID } from "crypto";
 
 const debateHistory: DebateHistory[] = [];
