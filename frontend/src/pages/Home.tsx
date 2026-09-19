@@ -3,7 +3,7 @@ import { AgentConfig } from "../components/AgentConfig";
 import { DebateControls } from "../components/DebateControls";
 import { DebateResults } from "../components/DebateResults";
 import { DryRunModal } from "../components/DryRunModal";
-import { AgentSpec, DebateResult } from "../../types/types";
+import { AgentSpec, DebateResult } from "../../../shared/types";
 import axios from "axios";
 
 export function Home() {
