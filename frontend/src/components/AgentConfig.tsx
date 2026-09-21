@@ -1,4 +1,4 @@
-import { AgentSpec } from "../../types/types";
+import { AgentSpec } from "../../../shared/types";
 import { useState } from "react";
 import { Plus, Trash2 } from "lucide-react";
 

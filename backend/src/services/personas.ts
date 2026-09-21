@@ -1,4 +1,4 @@
-import { PersonaDefinition } from "../../types/types.js";
+import { PersonaDefinition } from "../../../shared/types.js";
 
 export const DEFAULT_PERSONAS: Record<string, PersonaDefinition> = {
   general: {
